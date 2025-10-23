@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ケーキショップ</title>
+<style>
+  body {
+    background-color: #ffc0cb; /* 背景ピンク */
+    font-family: "UD デジタル 教科書体 NP";
+    margin: 0;
+    padding: 0;
+    background-repeat: repeat;
+  }
+
+  h1 {
+    color: #800000; /* タイトル文字色 */
+    text-align: center;
+    padding: 30px 0;
+    margin: 0;
+  }
+
+  /* Grid設定：3列 */
+  .wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  justify-items: center;   /* 各カードを中央寄せ */
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;        /* 横幅を調整 */
+  margin: 0 auto;          /* ページ中央に配置 */
+}
+
+
+  /* ケーキカード */
+  .cake {
+    background-color: #fff;
+    border: 2px solid #800000;
+    border-radius: 10px;
+    padding: 8px;
+    text-align: center;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+  }
+
+  /* 画像を小さく（全体比で） */
+  .cake img {
+  width: 100%;            /* 枠の幅いっぱいに表示 */
+  height: auto;           /* 縦横比を維持して高さ自動調整 */
+  border-radius: 8px;
+  max-width: 180px;       /* 画像の最大幅を制限（小さく見せる） */
+}
+
+
+  .cake h2 {
+    color: #800000;
+    font-size: 1em;       
+    margin: 8px 0;
+  }
+
+  .cake p {
+    font-size: 0.8em;
+    margin: 0;
+  }
+
+  /* スマホ対応 */
+  @media screen and (max-width: 900px) {
+    .wrap {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .wrap {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <h1>ケーキショップ</h1>
+
+<div class="wrap">
+    <div class="cake">
+      <h2>ショートケーキ</h2>
+    <img src="cake01.jpg" width="71%" height="445" alt=""/></div>
+
+    <div class="cake">
+      <h2>モンブラン</h2>
+      <img src="cake02.jpg" width="66%" height="463" alt=""/>
+    </div>
+
+    <div class="cake">
+      <h2>チョコレートケーキ</h2>
+     <img src="cake03.jpg" width="717" height="599" alt=""/>
+    </div>
+
+    <div class="cake">
+      <h2>シュークリーム</h2>
+  <img src="cake04.jpg" width="717" height="599" alt=""/> </div>
+  </div>
+</body>
+</html>
+
